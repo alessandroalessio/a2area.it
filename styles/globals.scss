@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #1D1D1D;
+    color: #fff;
+}
+
+@layer components {
+
+    .btn {
+      @apply 
+        rounded-full
+        px-3 py-3
+        md:px-4 md:py-1
+        text-sm
+        cursor-pointer
+        bg-gradient-to-r from-emerald-500 to-purple-500
+        ease-in-out duration-500
+        ;
+    }
+
+    .btn-bordered {
+        @apply
+            rounded-full
+            px-2 py-2
+            md:px-4 md:py-1
+            text-sm
+            cursor-pointer
+            border border-purple-500
+            ease-in-out duration-500
+            ;
+    }
+
+}
