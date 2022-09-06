@@ -1,6 +1,4 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
 
 class MyDocument extends Document {
   render() {

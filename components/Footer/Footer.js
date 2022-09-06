@@ -1,4 +1,4 @@
-const commonData = require('../data/common.json')
+const commonData = require('../../data/common.json')
 
 function Footer(){
     return(
