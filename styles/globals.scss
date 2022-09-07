@@ -10,11 +10,20 @@ body{
     color: #fff;
 }
 
+hr{
+    overflow: hidden;
+    border: none;
+    height: 3px;
+    border-radius: 4px;
+    @apply bg-gradient-to-r from-emerald-500 to-purple-500 duration-500 ease-in-out;
+}
+
 strong{
      @apply font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-emerald-500 to-purple-500;
 }
 
-.hero{
+
+.section-bg-element-bar{
     position: relative;
     overflow: hidden;
     &:after{
@@ -29,6 +38,48 @@ strong{
         background: rgb(0, 0, 0);
         background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(255, 255, 255, 0) 40%);
     }
+    &.reverse{
+        &:after{
+            content: "";
+            position: absolute;
+            z-index: -1;
+            top: 10%;
+            left: -10%;
+            width: 200%;
+            height: 100%;
+            transform: rotate(-10deg);
+            background: rgb(0, 0, 0);
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(255, 255, 255, 0) 40%);
+        }
+    }
+}
+@media only screen and (max-width: 992px) {
+    .section-bg-element-bar{
+        &:after{
+            top: 30%;
+            left: -50%;
+        }
+        &.reverse{
+            &:after{}
+        }
+    }
+}
+
+.hero{
+    // position: relative;
+    // overflow: hidden;
+    // &:after{
+    //     content: "";
+    //     position: absolute;
+    //     z-index: -1;
+    //     top: 60%;
+    //     left: -10%;
+    //     width: 200%;
+    //     height: 100%;
+    //     transform: rotate(10deg);
+    //     background: rgb(0, 0, 0);
+    //     background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(255, 255, 255, 0) 40%);
+    // }
     .image-wrapper{
         -webkit-filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.25));
         filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.25));
@@ -106,7 +157,7 @@ strong{
             ;
     }
     
-    .icon{
+    .icon-wrapper svg{
         @apply
                 rounded-full
                 px-2 py-2
