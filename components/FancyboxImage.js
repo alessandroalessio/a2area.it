@@ -1,5 +1,6 @@
 import { Fancybox } from "@fancyapps/ui"
 import '@fancyapps/ui/dist/fancybox.css'
+import Image from "next/image"
 
 Fancybox.bind("[data-fancybox]");
 
@@ -8,7 +9,7 @@ function FancyboxImage(props){
     let thumbImage = ( props.thumbImage!="" ) ? 'https://img.spacergif.org/v1/spacer.gif' : props.thumbImage
     return(
         <>
-            <a data-fancybox href={ props.zoomImage }><img src={props.thumbImage} /></a>
+            <a data-fancybox href={ props.zoomImage }><Image src={props.thumbImage} alt="" /></a>
         </>
     )
 }

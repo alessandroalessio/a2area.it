@@ -23,7 +23,7 @@ export default function Home() {
         <div className="hero pt-24 pb-36">
           <div className="max-w-6xl mx-auto flex items-center h-1/2">
             <div className="w-4/12">
-              <Image src={Me} title="Alessandro Alessio" />
+              <Image src={Me} title="Alessandro Alessio" alt="Alessandro Alessio" />
             </div>
             <div className="w-8/12">
               <h2 className="text-5xl p-8">Sono Alessandro.<br /> Realizzo <strong>Siti Web e Software</strong><br /> per privati e aziende.<br /> Se vuoi <a title="Preventivo Realizzazione Sito Web Alessandria"><strong>contattami</strong></a>!</h2>

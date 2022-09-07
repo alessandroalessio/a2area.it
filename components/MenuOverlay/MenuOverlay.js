@@ -15,7 +15,7 @@ function MenuOverlay(props) {
 
     return(
         <>
-        <span class={ menuClasses }>
+        <span className={ menuClasses }>
             <ul>
                 <li className="text-right mb-4"><small className="text-xs uppercase cursor-pointer tracking-widest" onClick={closeFullMenu}>Chiudi</small></li>
                 <li className="my-2 py-1"><Link href="/"><a>Chi sono</a></Link></li>
@@ -26,8 +26,8 @@ function MenuOverlay(props) {
             </ul>
         </span>
         <div className="btn-bordered flex md:hidden items-center" onClick={openFullMenu}>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
             </svg>
         </div>
         </>
