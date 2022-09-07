@@ -22,6 +22,9 @@ strong{
      @apply font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-emerald-500 to-purple-500;
 }
 
+.link{
+    @apply duration-500 ease-in-out opacity-75 hover:opacity-100;
+}
 
 .section-bg-element-bar{
     position: relative;
@@ -37,6 +40,20 @@ strong{
         transform: rotate(10deg);
         background: rgb(0, 0, 0);
         background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(255, 255, 255, 0) 40%);
+    }
+    &.small{
+        &:after{
+            content: "";
+            position: absolute;
+            z-index: -1;
+            top: 60%;
+            left: -10%;
+            width: 200%;
+            height: 100%;
+            transform: rotate(3deg);
+            background: rgb(0, 0, 0);
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(255, 255, 255, 0) 40%);
+        }
     }
     &.reverse{
         &:after{
@@ -61,6 +78,11 @@ strong{
         }
         &.reverse{
             &:after{}
+        }
+        &.small{
+            &:after{
+                top: 40%;
+            }
         }
     }
 }

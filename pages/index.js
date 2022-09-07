@@ -4,14 +4,14 @@ import Image from 'next/image'
 import { motion, AnimatePresence } from "framer-motion"
 import Navbar from '../components/Navbar/Navbar'
 import Footer from '../components/Footer/Footer'
-// import fs from 'fs';
-// import matter from 'gray-matter';
 import getAllMarkdownFiles from '../lib/markdownReader'
+import getSingleJSON from '../lib/JSONReader'
 
 import Me from '../public/me.png'
+import Logo from '../public/logo.png'
 const commonData = require('../data/common.json')
 
-export default function Home({services}) {
+export default function Home({services, personalData}) {
   return (
     <div>
       <Head>
@@ -100,15 +100,32 @@ export default function Home({services}) {
 
         
         <section className="px-32 mb-8 text-center">
+          <h3 className="seo-subtitle">Siti Web Alessandria</h3>
           <h2 className="title">Lavori</h2>
+          <p className="subtitle">Una selezione degli ultimi lavori</p>
         </section>
 
         <section className="px-32 mb-8 text-center">
-          <h3 className="text-md uppercase tracking-widest">Siti Web Alessandria</h3>
+          <h3 className="seo-subtitle">Siti Web Alessandria</h3>
           <h2 className="title">Tecnologia dei siti web</h2>
+          <p className="subtitle">Come realizzo i siti web</p>
         </section>
 
-        <Footer />
+        <section className="px-32 mb-8 text-center">
+          <div className="flex">
+            <div className="w-4/12">
+              <h3 className="seo-subtitle">Siti Web Alessandria</h3>
+              <h2 className="title">Blog &amp; Tutorial</h2>
+              <p className="subtitle">Ultimi articoli dal mio blog</p>
+            </div>
+          </div>
+        </section>
+
+        <Footer 
+          logo={Logo} logoWidth={66} logoHeight={51} 
+          siteName={commonData.SiteName} officeAddress={personalData.headquarters.operative.value}
+          vatNumber={personalData.tax_data.vat.value} fiscalCode={personalData.tax_data.code.value}
+          email={personalData.conctacts.mail.value} pec={personalData.conctacts.pec.value} />
       </main>
 
     </div>
@@ -117,30 +134,15 @@ export default function Home({services}) {
 
 //Generating the Static Props for the Blog Page
 export async function getStaticProps(){
-  
-  // console.log("================================")
-  // console.log( await getAllMarkdownFiles('data/collections/services') )
-  // console.log("================================")
-
-  // const servicesFiles = fs.readdirSync('data/collections/services');
-  
-  // const services = servicesFiles.map((fileName) => {
-  //     const slug = fileName.replace('.md', '');
-  //     const readFile = fs.readFileSync(`data/collections/services/${fileName}`, 'utf-8');
-  //     const { data: frontmatter } = matter(readFile);
-
-  //     return {
-  //       slug,
-  //       frontmatter,
-  //     };
-  // });
 
   const services = await getAllMarkdownFiles('data/collections/services')
+  const personalData = await getSingleJSON('https://www.alessandroalessio.eu/data/contacts.json')
 
   // Return the pages static props
   return {
       props: {
         services,
+        personalData
       },
   };
 }

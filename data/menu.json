@@ -1,0 +1,13 @@
+{
+    "main": [ 
+        {"chi-sono" : "Chi sono"},
+        {"servizi" : "Servizi"},
+        {"portfolio" : "Portfolio"},
+        {"blog" : "Blog"},
+        {"contatti" : "Contatti"}
+    ],
+    "footer": [ 
+        {"label" : "Privacy", "url" : "privacy"},
+        {"label" : "Cookies", "url" : "cookie"}
+    ]
+}
