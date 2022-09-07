@@ -1,0 +1,34 @@
+@-webkit-keyframes flutuate {
+    0% { -webkit-transform: translateY(10px); }
+    50% { -webkit-transform: translateY(-10px); }
+    100% { -webkit-transform: translateY(10px); }
+}
+.do-flutuate{
+    -webkit-transform: translateY(0px);
+    animation: flutuate 4s infinite ease-in-out;
+}
+
+@-webkit-keyframes spin {
+    0%  {-webkit-transform: rotate(0deg);}
+    100% {-webkit-transform: rotate(360deg);}   
+}
+.do-spin{
+    margin: 20px;
+    width: 100px; 
+    height: 100px;    
+    background: #f00;
+    -webkit-animation: spin 4s infinite linear;
+}
+
+@-webkit-keyframes text-clip-top-down{
+    from{
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    to{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+}
+.do-text-clip-top-down{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    animation: text-clip-top-down 1s 1 ease-in-out;
+}
