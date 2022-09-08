@@ -12,7 +12,7 @@ function Footer(props){
                     <div className="block mx-auto md:gap-3 md:flex items-center">
                         <div className="w-11/12 mx-auto md:w-6/12 md:mx-0 text-center md:text-left">
                             <div className="flex">
-                                <Image src={props.logo} width={props.logoWidth} height={props.logoHeight} className="opacity-50" />
+                                <Image src={props.logo} width={props.logoWidth} height={props.logoHeight} className="opacity-50" alt="Siti Web Alessandria" />
                                 <span className="ml-3 text-left text-xs leading-4 opacity-80">
                                     <p className="text-sm uppercase tracking-widest">{props.siteName}</p>
                                     <p>
@@ -26,7 +26,7 @@ function Footer(props){
                         <div className="w-11/12 mx-auto md:w-6/12 md:mx-0 text-center md:text-right">
                             <ul className="flex justify-center md:justify-end py-4 md:py-0">
                                 { footerMenu.footer.map((item, k) => {
-                                    return <li><Link href={item.url}><a className="p-4 link">{item.label}</a></Link></li>
+                                    return <li key={k}><Link href={item.url}><a className="p-4 link">{item.label}</a></Link></li>
                                 }) }
                             </ul>
                         </div>
