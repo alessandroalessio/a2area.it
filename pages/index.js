@@ -107,75 +107,107 @@ export default function Home({services, personalData}) {
 
         <section className="px-32 mb-8 text-center">
           <h3 className="seo-subtitle">Siti Web Alessandria</h3>
+          <h2 className="title">Recensioni e Feedback</h2>
+          <p className="subtitle">Cosa dicono di me collaboratori e clienti</p>
+        </section>
+
+        <section className="px-32 mb-8 text-center">
+          <h3 className="seo-subtitle">Siti Web Alessandria</h3>
           <h2 className="title">Tecnologia dei siti web</h2>
           <p className="subtitle">Come realizzo i siti web</p>
         </section>
 
-        <section className="max-w-6xl mx-auto mb-8 text-center">
-          <div className="md:flex">
-            <div className="md:w-4/12 text-left">
-              <h3 className="seo-subtitle">Siti Web Alessandria</h3>
-              <h2 className="title">Blog &amp; Tutorial</h2>
-              <p className="my-4">Per me, i miei clienti, collaboratori e utenti sono solito condividere quello che imparo nel giornaliero.</p>
-              <p>Questo mi permette di divulgare le mie competenze e di aiutare coloro che hanno dubbi o problemi in merito ad argomenti digitali.</p>
-              <div className="text-right mt-4">
-                <Link href="/blog"><a className="btn">Tutti gli articoli</a></Link>
+        <section className="section-bg-element-bar">
+          <div className="max-w-6xl mx-auto mt-32 mb-8 text-center">
+            <div className="md:flex">
+              <div className="md:w-4/12 text-left">
+                <h3 className="seo-subtitle">Siti Web Alessandria</h3>
+                <h2 className="title">Blog &amp; Tutorial</h2>
+                <p className="my-4">Per me, i miei clienti, collaboratori e utenti sono solito condividere quello che imparo nel giornaliero.</p>
+                <p>Questo mi permette di divulgare le mie competenze e di aiutare coloro che hanno dubbi o problemi in merito ad argomenti digitali.</p>
+                <div className="text-right mt-4">
+                  <Link href="/blog"><a className="btn">Tutti gli articoli</a></Link>
+                </div>
               </div>
-            </div>
-            <div className="md:w-8/12">
+              <div className="md:w-8/12">
 
-              <div className="mb-4 ml-auto w-11/12 text-left">
-                <Link href="/">
-                  <a className="block bg-white/5 duration-500 ease-in-out cursor-pointer hover:bg-white/10 p-8 rounded-xl">
-                    <h3 className="title text-2xl">Woocommerce: Cambiare il mittente delle email</h3>
-                    <p className="flex opacity-60 mb-2 text-xs">
-                      <div className="date flex align-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-3 h-3">
-                          <path strokeLinecap="round" strokeinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
-                        </svg>
-                        <span className="ml-2">28 Agosto 2022</span>
+                <div className="mb-4 ml-auto w-11/12 text-left relative">
+                  <Link href="/">
+                    <a className="flex bg-white/5 duration-500 ease-in-out cursor-pointer hover:bg-white/10 p-8 rounded-xl">
+                      <div className="ml-4">
+                        <h3 className="title text-xl">Woocommerce: Cambiare il mittente delle email</h3>
+                        <p className="flex opacity-60 mb-2 text-xs">
+                          <div className="date flex align-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-3 h-3">
+                              <path strokeLinecap="round" strokeinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
+                            </svg>
+                            <span className="ml-2">28 Agosto 2022</span>
+                          </div>
+                          <div className="flex uppercase ml-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-3 h-3">
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M9.568 3H5.25A2.25 2.25 0 003 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 005.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 009.568 3z" />
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M6 6h.008v.008H6V6z" />
+                            </svg>
+                            <span className="ml-2">Wordpress, Woocommerce</span>
+                          </div>
+                        </p>
                       </div>
-                      <div className="flex uppercase ml-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-3 h-3">
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M9.568 3H5.25A2.25 2.25 0 003 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 005.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 009.568 3z" />
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M6 6h.008v.008H6V6z" />
-                        </svg>
-                        <span className="ml-2">Wordpress, Woocommerce</span>
+                      <div className="absolute top-1/2 left-full translate-xy-neg-half"><span className="btn">&gt;</span></div>
+                    </a>
+                  </Link>
+                </div>
+                <div className="mb-4 ml-auto w-11/12 text-left relative">
+                  <Link href="/">
+                    <a className="flex bg-white/5 duration-500 ease-in-out cursor-pointer hover:bg-white/10 p-8 rounded-xl">
+                      <div className="ml-4">
+                        <h3 className="title text-xl">WordPress: uno shortcode per gestire le traduzioni di WPML</h3>
+                        <p className="flex opacity-60 mb-2 text-xs">
+                          <div className="date flex align-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-3 h-3">
+                              <path strokeLinecap="round" strokeinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
+                            </svg>
+                            <span className="ml-2">28 Agosto 2022</span>
+                          </div>
+                          <div className="flex uppercase ml-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-3 h-3">
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M9.568 3H5.25A2.25 2.25 0 003 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 005.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 009.568 3z" />
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M6 6h.008v.008H6V6z" />
+                            </svg>
+                            <span className="ml-2">Wordpress, Woocommerce</span>
+                          </div>
+                        </p>
                       </div>
-                    </p>
-                    <div><hr className="w-8 mb-4" /></div>
-                    <div className="text-right mt-4"><span className="btn">Tutti gli articoli</span></div>
-                  </a>
-                </Link>
+                      <div className="absolute top-1/2 left-full translate-xy-neg-half"><span className="btn">&gt;</span></div>
+                    </a>
+                  </Link>
+                </div>
+                <div className="mb-4 ml-auto w-11/12 text-left relative">
+                  <Link href="/">
+                    <a className="flex bg-white/5 duration-500 ease-in-out cursor-pointer hover:bg-white/10 p-8 rounded-xl">
+                      <div className="ml-4">
+                        <h3 className="title text-xl">Caricare o importare i Google Fonts dal proprio hosting (self hosted)</h3>
+                        <p className="flex opacity-60 mb-2 text-xs">
+                          <div className="date flex align-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-3 h-3">
+                              <path strokeLinecap="round" strokeinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
+                            </svg>
+                            <span className="ml-2">28 Agosto 2022</span>
+                          </div>
+                          <div className="flex uppercase ml-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-3 h-3">
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M9.568 3H5.25A2.25 2.25 0 003 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 005.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 009.568 3z" />
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M6 6h.008v.008H6V6z" />
+                            </svg>
+                            <span className="ml-2">Wordpress, Woocommerce</span>
+                          </div>
+                        </p>
+                      </div>
+                      <div className="absolute top-1/2 left-full translate-xy-neg-half"><span className="btn">&gt;</span></div>
+                    </a>
+                  </Link>
+                </div>
+
               </div>
-
-
-              <div className="mb-4 ml-auto w-11/12 text-left">
-                <Link href="/">
-                  <a className="block bg-white/5 duration-500 ease-in-out cursor-pointer hover:bg-white/10 p-8 rounded-xl">
-                    <h3 className="title text-2xl">Woocommerce: Cambiare il mittente delle email</h3>
-                    <p className="flex opacity-60 mb-2 text-xs">
-                      <div className="date flex align-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-3 h-3">
-                          <path strokeLinecap="round" strokeinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
-                        </svg>
-                        <span className="ml-2">28 Agosto 2022</span>
-                      </div>
-                      <div className="flex uppercase ml-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-3 h-3">
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M9.568 3H5.25A2.25 2.25 0 003 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 005.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 009.568 3z" />
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M6 6h.008v.008H6V6z" />
-                        </svg>
-                        <span className="ml-2">Wordpress, Woocommerce</span>
-                      </div>
-                    </p>
-                    <div><hr className="w-8 mb-4" /></div>
-                    <div className="text-sm">Woocommerce è uno dei motori Ecommerce più utilizzati online. Permette di gestire e personalizzare molteplici aspetti di un negozio online, partendo dalla gestione del catalogo fino ad arrivare alla gestione dei clienti e degli ordini. Il risultato è che la grande divulgazione di WordPress ha favorito Woocommerce ed è diventato “quasi” uno standard per molti Web Designer (e non) nel…</div>
-                    <div className="text-right mt-4"><span className="btn">Tutti gli articoli</span></div>
-                  </a>
-                </Link>
-              </div>
-
             </div>
           </div>
         </section>

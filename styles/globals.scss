@@ -26,6 +26,10 @@ strong{
     @apply duration-500 ease-in-out opacity-75 hover:opacity-100;
 }
 
+.translate-x-neg-half{ transform: translateX(-50%); }
+.translate-y-neg-half{ transform: translateY(-50%); }
+.translate-xy-neg-half{ transform: translate(-50%, -50%); }
+
 .section-bg-element-bar{
     position: relative;
     overflow: hidden;
