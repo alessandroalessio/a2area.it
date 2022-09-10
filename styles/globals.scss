@@ -135,12 +135,39 @@ strong{
     }
 }
 
+.portfolio-wrapper{
+    .portfolio-overlay{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        background-color: rgba(#1D1D1D, 0.85);
+        opacity: 0;
+        transform: translateY(-100%);
+        transition: all 0.5s ease-in-out;
+        h3{
+            @apply font-extrabold text-xl text-transparent bg-clip-text bg-gradient-to-br from-emerald-500 to-purple-500;
+        }
+    }
+    &:hover{
+        .portfolio-overlay{
+            opacity: 1;
+            transform: translateY(0%);
+        }
+    }
+}
+
 
 // Componenti
 @layer components {
 
     .title{
-        @apply font-extrabold text-4xl text-transparent bg-clip-text bg-gradient-to-br from-emerald-500 to-purple-500;
+        @apply font-extrabold text-2xl sm:text-2xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-br from-emerald-500 to-purple-500;
     }
 
     .subtitle{

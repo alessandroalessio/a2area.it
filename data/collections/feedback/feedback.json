@@ -1,0 +1,44 @@
+[
+    {
+        "author" : "Corrado Carosio",
+        "company" : "Bottega del Suono",
+        "star" : 5,
+        "text" : "Alessandro è un grande professionista: efficiente, esperto e reattivo, affronta il lavoro con passione e sensibilità, traducendo in codice esattamente ciò che si ha in mente."
+    },
+    {
+        "author" : "",
+        "company" : "Arredamenti Bergaglio",
+        "star" : 5,
+        "text" : "Abbiamo affidato il sito web del nostro negozio alla sua persona e ci siamo trovati molto bene sia dal punto di vista umano che professionale: preciso, gentile, preparato e soprattutto molto disponibile."
+    },
+    {
+        "author" : "Filippo Timo",
+        "company" : "Tesori d'Arte",
+        "star" : 5,
+        "text" : "Preciso, affidabile, efficiente e rapido: queste le caratteristiche di Alessandro Alessio, web designer e programmatore dalla solida professionalità, con cui collaborare è anche piacevole."
+    },
+    {
+        "author" : "Paolo Bernardotti",
+        "company" : "PB Wedding",
+        "star" : 5,
+        "text" : "Collaboro abitualmente con Alessandro, che ritengo il migliore nella sua attività per precisione e capacità di sapere interpretare e realizzare i bisogni del cliente in termini di programmazione e di posizionamento. Per questo ho anche deciso di affidare a lui la realizzazione del mio sito web, che ora  finalmente è esattamente come lo immaginavo e mi sta dando grandissime soddisfazioni in termini di redemption"
+    },
+    {
+        "author" : "",
+        "company" : "Tomaso Serloreti",
+        "star" : 5,
+        "text" : "Alessandro un ottimo professionista e un prezioso collaboratore, sempre aggiornato sulle tendenze e le nuove tecnologie. Attendo, preciso e con uno spiccato buongusto che applica nella parte grafica."
+    },
+    {
+        "author" : "Pierangelo Fornaro",
+        "company" : "Bottega del Suono",
+        "star" : 5,
+        "text" : "Preciso, affidabile, efficiente e rapido: queste le caratteristiche di Alessandro Alessio, web designer e programmatore dalla solida professionalità, con cui collaborare è anche piacevole."
+    },
+    {
+        "author" : "Lucio Laugelli",
+        "company" : "Stan Wood Studio",
+        "star" : 5,
+        "text" : "Prezioso collaboratore e ottimo programmatore!"
+    }
+]

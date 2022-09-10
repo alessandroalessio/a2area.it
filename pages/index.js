@@ -6,18 +6,22 @@ import Navbar from '../components/Navbar/Navbar'
 import Footer from '../components/Footer/Footer'
 import getAllMarkdownFiles from '../lib/markdownReader'
 import getSingleJSON from '../lib/JSONReader'
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide, Autoplay } from 'swiper/react';
 
 import SectionTitle from '../components/SectionTitle'
 import ServiceStandard from '../components/Collections/Services/ServicesStandard'
+import PortfolioItemLg from '../components/Collections/Portfolio/PortfolioItemLg'
+import PortfolioItemMd from '../components/Collections/Portfolio/PortfolioItemMd'
 import FeatureBox from '../components/Collections/Features/FeatureBox'
+import Feedback from '../components/Collections/Feedback/Feedback'
 import PostSmall from '../components/Collections/Posts/PostSmall'
 
 import Me from '../public/me.png'
 import Logo from '../public/logo.png'
 const commonData = require('../data/common.json')
+const feedbacks = require('../data/collections/feedback/feedback.json')
 
-export default function Home({services, personalData, features, posts}) {
+export default function Home({services, latestPortfolio, portfolio, personalData, features, posts}) {
   return (
     <div>
       <Head>
@@ -87,7 +91,33 @@ export default function Home({services, personalData, features, posts}) {
 
         <section className="section-bg-element-bar">
           <div className="max-w-6xl mx-auto mb-36 text-center">
-            <SectionTitle seoSubtitle="Portfolio Siti Web Alessandria" title="Lavori" subtitle="Una selezione degli ultimi lavori" />
+
+            <div className="md:flex">
+              <div className="w-11/12 mx-auto mb-6 md:w-4/12 md:mx-0 md:mb-0 text-left">
+                <h3 className="seo-subtitle">Portfolio Siti Web Alessandria</h3>
+                <h2 className="title">Lavori</h2>
+                <p className="mt-4 mb-2">Qui puoi trovare una selezione degli ultimi lavori realizzati. Principalmente troverai lavori su <strong>Wordpress</strong>, eCommerce su <strong>Woocommerce</strong>, <strong>Prestashop</strong> e <strong>Shopify</strong>.</p>
+                <p className="mt-2 mb-4">Spesso integro nuove tecnologie come <strong>React</strong> e <strong>NextJs</strong> nei miei progetti. Se sei interessato a capire con quali tecnologie possiamo lavorare <Link href="/contatti"><a>contattami</a></Link>.</p>
+                <div className="text-right mt-8 md:mt-4">
+                  <Link href="/portfolio"><a className="btn">Tutti i lavori</a></Link>
+                </div>
+              </div>
+              <div className="w-11/12 mx-auto md:w-8/12">
+
+                <div className="max-w-6xl mx-4">
+                  { latestPortfolio.map( (portfolioItem, iPortfolioItem) => {
+                    return(<PortfolioItemLg key={iPortfolioItem} index={portfolioItem.index} slug={portfolioItem.slug} title={portfolioItem.title.rendered} image={portfolioItem.immagine_hero} />)
+                  } ) }
+                </div>
+                <div className="flex gap-2 max-w-6xl mx-4">
+                  { portfolio.map( (portfolioItem, iPortfolioItem) => {
+                    return(<PortfolioItemMd key={iPortfolioItem} index={portfolioItem.index} slug={portfolioItem.slug} title={portfolioItem.title.rendered} image={portfolioItem.fimg_url} />)
+                  } ) }
+                </div>
+
+              </div>
+            </div>
+
           </div>
         </section>
 
@@ -95,24 +125,24 @@ export default function Home({services, personalData, features, posts}) {
           <div className="max-w-6xl mx-auto mb-36 text-center">
             <SectionTitle seoSubtitle="Siti Web Alessandria" title="Recensioni e Feedback" subtitle="Cosa dicono di me collaboratori e clienti" />
 
-            <Swiper
-              spaceBetween={15}
-              slidesPerView={1}
-              navigation
-              pagination={{ clickable: true }}
-              scrollbar={{ draggable: true }}
-            >
-              <SwiperSlide><FeatureBox title="Slide 1" excerpt="lorem ipsum dolor sit amet" /></SwiperSlide>
-              <SwiperSlide><FeatureBox title="Slide 1" excerpt="lorem ipsum dolor sit amet" /></SwiperSlide>
-              <SwiperSlide><FeatureBox title="Slide 1" excerpt="lorem ipsum dolor sit amet" /></SwiperSlide>
-              <SwiperSlide><FeatureBox title="Slide 1" excerpt="lorem ipsum dolor sit amet" /></SwiperSlide>
-            </Swiper>
+            <div className="mx-0 sm:mx-8">
+              <Swiper
+                spaceBetween={15}
+                slidesPerView={1}
+                autoplay={{ delay: 3000 }}
+              >
+                { feedbacks.map( (feedback, iFeedback) => {
+                  return(<SwiperSlide><Feedback author={feedback.author} title={feedback.company} excerpt={feedback.text} star={feedback.star} /></SwiperSlide>)
+                }) }
+              </Swiper>
+            </div>
 
+            <div><hr className="mt-4 w-8 mx-auto" /></div>
           </div>
         </section>
         
         <section className="section-bg-element-bar">
-          <div className="max-w-6xl mx-auto mb-36 text-center">
+          <div className="max-w-6xl mx-auto mb-12 md:mb-36 text-center">
             <SectionTitle seoSubtitle="Tecnologia di Siti Web Alessandria" title="Tecnologia dei siti web" subtitle="Come realizzo i siti web" />
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mx-4 sm:mx-0">
@@ -122,7 +152,7 @@ export default function Home({services, personalData, features, posts}) {
             </div>
 
             <div className="text-center mt-16">
-              <span className="btn text-lg py-4 px-8">Scopri come realizzeremo il tuo sito web</span>
+              <span className="btn md:text-lg md:py-4 md:px-8">Scopri come realizzerò il tuo sito web</span>
             </div>
           </div>
         </section>
@@ -156,6 +186,7 @@ export default function Home({services, personalData, features, posts}) {
           siteName={commonData.SiteName} officeAddress={personalData.headquarters.operative.value}
           vatNumber={personalData.tax_data.vat.value} fiscalCode={personalData.tax_data.code.value}
           email={personalData.conctacts.mail.value} pec={personalData.conctacts.pec.value} />
+
       </main>
 
     </div>
@@ -167,6 +198,8 @@ export async function getStaticProps(){
 
   const personalData = await getSingleJSON('https://www.alessandroalessio.eu/data/contacts.json')
   const services = await getAllMarkdownFiles('data/collections/services')
+  const latestPortfolio = await getSingleJSON('https://www.a2area.it/wp-json/wp/v2/portfolio/?per_page=1')
+  const portfolio = await getSingleJSON('https://www.a2area.it/wp-json/wp/v2/portfolio/?per_page=2&offset=1')
   const features = await getAllMarkdownFiles('data/collections/features')
   const posts = await getSingleJSON('https://www.a2area.it/wp-json/wp/v2/posts/?per_page=3')
 
@@ -177,6 +210,8 @@ export async function getStaticProps(){
       props: {
         personalData,
         services,
+        latestPortfolio,
+        portfolio,
         features,
         posts
       },
