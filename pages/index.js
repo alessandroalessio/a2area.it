@@ -132,7 +132,7 @@ export default function Home({services, latestPortfolio, portfolio, personalData
                 autoplay={{ delay: 3000 }}
               >
                 { feedbacks.map( (feedback, iFeedback) => {
-                  return(<SwiperSlide><Feedback author={feedback.author} title={feedback.company} excerpt={feedback.text} star={feedback.star} /></SwiperSlide>)
+                  return(<SwiperSlide key={iFeedback}><Feedback author={feedback.author} title={feedback.company} excerpt={feedback.text} star={feedback.star} /></SwiperSlide>)
                 }) }
               </Swiper>
             </div>
