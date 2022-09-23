@@ -4,10 +4,10 @@ import Img from 'next/image'
 export default function PortfolioItemLg(props){
     return(
         <>
-            <div className="overflow-auto rounded-xl">
+            <div className="overflow-auto">
                 <Link href={"/portfolio/"+props.slug}>
-                    <a>
-                        <div className="portfolio-wrapper overflow-hidden relative">
+                    <a className="inline-block">
+                        <div className="portfolio-wrapper overflow-hidden relative block">
                             <div className="portfolio-overlay">
                                 <div className="max-w-sm">
                                     <h3>{props.title}</h3>
@@ -19,7 +19,9 @@ export default function PortfolioItemLg(props){
                                     </div>
                                 </div>
                             </div>
-                            <Img src={props.image} alt={props.title} width={2000} height={1000} />
+                            <div className="block border-b">
+                                <Img src={props.image} alt={props.title} width={734} height={367} className="inline-block m-0 p-0 border" />
+                            </div>
                         </div>
                     </a>
                 </Link>

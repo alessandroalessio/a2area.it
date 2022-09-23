@@ -93,7 +93,7 @@ export default function Home({services, latestPortfolio, portfolio, personalData
           <div className="max-w-6xl mx-auto mb-36 text-center">
 
             <div className="md:flex">
-              <div className="w-11/12 mx-auto mb-6 md:w-4/12 md:mx-0 md:mb-0 text-left">
+              <div className="w-11/12 mx-auto mb-6 md:w-5/12 md:mx-0 md:mb-0 text-left">
                 <h3 className="seo-subtitle">Portfolio Siti Web Alessandria</h3>
                 <h2 className="title">Lavori</h2>
                 <p className="mt-4 mb-2">Qui puoi trovare una selezione degli ultimi lavori realizzati. Principalmente troverai lavori su <strong>Wordpress</strong>, eCommerce su <strong>Woocommerce</strong>, <strong>Prestashop</strong> e <strong>Shopify</strong>.</p>
@@ -102,19 +102,16 @@ export default function Home({services, latestPortfolio, portfolio, personalData
                   <Link href="/portfolio"><a className="btn">Tutti i lavori</a></Link>
                 </div>
               </div>
-              <div className="w-11/12 mx-auto md:w-8/12">
-
-                <div className="max-w-6xl mx-4">
+              <div className="w-11/12 mx-auto md:w-8/12 px-0 md:px-4">
+                <Swiper
+                  spaceBetween={15}
+                  slidesPerView={1}
+                  autoplay={{ delay: 3000 }}
+                >
                   { latestPortfolio.map( (portfolioItem, iPortfolioItem) => {
-                    return(<PortfolioItemLg key={iPortfolioItem} index={portfolioItem.index} slug={portfolioItem.slug} title={portfolioItem.title.rendered} image={portfolioItem.immagine_hero} />)
+                    return(<SwiperSlide key={iPortfolioItem}><PortfolioItemLg key={iPortfolioItem} index={portfolioItem.index} slug={portfolioItem.slug} title={portfolioItem.title.rendered} image={portfolioItem.immagine_hero} /></SwiperSlide>)
                   } ) }
-                </div>
-                <div className="flex gap-2 max-w-6xl mx-4">
-                  { portfolio.map( (portfolioItem, iPortfolioItem) => {
-                    return(<PortfolioItemMd key={iPortfolioItem} index={portfolioItem.index} slug={portfolioItem.slug} title={portfolioItem.title.rendered} image={portfolioItem.fimg_url} />)
-                  } ) }
-                </div>
-
+                </Swiper>
               </div>
             </div>
 
@@ -198,7 +195,7 @@ export async function getStaticProps(){
 
   const personalData = await getSingleJSON('https://www.alessandroalessio.eu/data/contacts.json')
   const services = await getAllMarkdownFiles('data/collections/services')
-  const latestPortfolio = await getSingleJSON('https://www.a2area.it/wp-json/wp/v2/portfolio/?per_page=1')
+  const latestPortfolio = await getSingleJSON('https://www.a2area.it/wp-json/wp/v2/portfolio/?per_page=3')
   const portfolio = await getSingleJSON('https://www.a2area.it/wp-json/wp/v2/portfolio/?per_page=2&offset=1')
   const features = await getAllMarkdownFiles('data/collections/features')
   const posts = await getSingleJSON('https://www.a2area.it/wp-json/wp/v2/posts/?per_page=3')
