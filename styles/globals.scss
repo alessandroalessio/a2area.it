@@ -4,6 +4,22 @@
 
 @import 'animation';
 
+::-webkit-scrollbar {
+  width: 8px;
+  transition: all 0.5s ease-in-out;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 1em;
+  transition: all 0.5s ease-in-out;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
 body{
     font-family: 'Poppins', sans-serif;
     background-color: #1D1D1D;
