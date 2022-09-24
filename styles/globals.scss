@@ -38,6 +38,12 @@ strong{
      @apply font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-emerald-500 to-purple-500;
 }
 
+.img-wrapper{
+    img{
+        border-radius: 1em;
+    }
+}
+
 .link{
     @apply duration-500 ease-in-out opacity-75 hover:opacity-100;
 }

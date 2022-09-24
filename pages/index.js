@@ -109,7 +109,7 @@ export default function Home({services, latestPortfolio, portfolio, personalData
                   autoplay={{ delay: 3000 }}
                 >
                   { latestPortfolio.map( (portfolioItem, iPortfolioItem) => {
-                    return(<SwiperSlide key={iPortfolioItem}><PortfolioItemLg key={iPortfolioItem} index={portfolioItem.index} slug={portfolioItem.slug} title={portfolioItem.title.rendered} image={portfolioItem.immagine_hero} /></SwiperSlide>)
+                    return(<SwiperSlide key={iPortfolioItem}><PortfolioItemLg key={iPortfolioItem} index={portfolioItem.index} slug={portfolioItem.slug} title={portfolioItem.title.rendered} image={portfolioItem.immagine_hero} imageMobile={portfolioItem.fimg_url} /></SwiperSlide>)
                   } ) }
                 </Swiper>
               </div>
@@ -200,7 +200,7 @@ export async function getStaticProps(){
   const features = await getAllMarkdownFiles('data/collections/features')
   const posts = await getSingleJSON('https://www.a2area.it/wp-json/wp/v2/posts/?per_page=3')
 
-  // console.log(features)
+  console.log(latestPortfolio)
 
   // Return the pages static props
   return {
