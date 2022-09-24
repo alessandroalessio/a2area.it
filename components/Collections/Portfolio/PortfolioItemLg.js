@@ -19,11 +19,8 @@ export default function PortfolioItemLg(props){
                                     </div>
                                 </div>
                             </div>
-                            <div className="block img-wrapper">
-                                <Img src={props.image} alt={props.title} width={734} height={367} className="hidden md:block m-0 p-0 border" />
-                                <Img src={props.imageMobile} alt={props.title} width={734} height={734} className="block md:hidden  m-0 p-0 border" />
-                               
-                            </div>
+                            <div className="hidden md:block"><Img src={props.image} alt={props.title} width={734} height={367} className="rounded-lg"/></div>
+                            <div className="block md:hidden"><Img src={props.imageMobile} alt={props.title} width={734} height={734} className="rounded-lg" /></div>
                         </div>
                     </a>
                 </Link>

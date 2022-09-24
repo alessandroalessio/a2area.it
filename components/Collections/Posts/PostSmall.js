@@ -3,7 +3,7 @@ import dateFormatted from '../../../lib/dateFormatter'
 
 export default function PostSmall(props){
     return(<>
-        <div className="mb-4 md:ml-auto w-full md:w-11/12 text-left relative">
+        <div className="mb-12 md:mb-4 md:ml-auto w-full md:w-11/12 text-left relative">
             <Link href={"/blog/" + props.slug}>
             <a className="flex bg-white/5 duration-500 ease-in-out cursor-pointer hover:bg-white/10 p-8 rounded-xl">
                 <div className="ml-4">
@@ -15,7 +15,7 @@ export default function PostSmall(props){
                         <span className="ml-2">{dateFormatted(props.date)}</span>
                     </p>
                 </div>
-                <div className="absolute top-1/2 left-full translate-xy-neg-half"><span className="btn">&gt;</span></div>
+                <div className="absolute translate-xy-neg-half top-1/2 left-full"><span className="btn text-2xl px-6 py-3">&gt;</span></div>
             </a>
             </Link>
         </div>

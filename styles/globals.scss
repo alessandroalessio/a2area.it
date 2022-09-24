@@ -38,12 +38,6 @@ strong{
      @apply font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-emerald-500 to-purple-500;
 }
 
-.img-wrapper{
-    img{
-        border-radius: 1em;
-    }
-}
-
 .link{
     @apply duration-500 ease-in-out opacity-75 hover:opacity-100;
 }
@@ -187,6 +181,10 @@ strong{
 
 // Componenti
 @layer components {
+
+    .content-wrapper{
+        @apply max-w-6xl mx-4 md:mx-auto;
+    }
 
     .title{
         @apply font-extrabold text-2xl sm:text-2xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-br from-emerald-500 to-purple-500;

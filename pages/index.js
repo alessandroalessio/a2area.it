@@ -74,7 +74,7 @@ export default function Home({services, latestPortfolio, portfolio, personalData
         </AnimatePresence>
 
         <section className="section-bg-element-bar reverse">
-          <div className="max-w-6xl mx-auto mb-36 text-center">
+          <div className="content-wrapper mb-36 text-center">
             <SectionTitle seoSubtitle="Servizi per Siti Web Alessandria" title="Servizi" subtitle="Cosa posso fare per te" />
 
             <div className="lg:flex lg:gap-3 my-4 text-left">
@@ -90,9 +90,9 @@ export default function Home({services, latestPortfolio, portfolio, personalData
         </section>
 
         <section className="section-bg-element-bar">
-          <div className="max-w-6xl mx-auto mb-36 text-center">
+          <div className="content-wrapper mb-36 text-center">
 
-            <div className="md:flex">
+            <div className="md:flex md:mx-2">
               <div className="w-11/12 mx-auto mb-6 md:w-5/12 md:mx-0 md:mb-0 text-left">
                 <h3 className="seo-subtitle">Portfolio Siti Web Alessandria</h3>
                 <h2 className="title">Lavori</h2>
@@ -119,7 +119,7 @@ export default function Home({services, latestPortfolio, portfolio, personalData
         </section>
 
         <section className="section-bg-element-bar reverse">
-          <div className="max-w-6xl mx-auto mb-36 text-center">
+          <div className="content-wrapper mb-36 text-center">
             <SectionTitle seoSubtitle="Siti Web Alessandria" title="Recensioni e Feedback" subtitle="Cosa dicono di me collaboratori e clienti" />
 
             <div className="mx-0 sm:mx-8">
@@ -139,7 +139,7 @@ export default function Home({services, latestPortfolio, portfolio, personalData
         </section>
         
         <section className="section-bg-element-bar">
-          <div className="max-w-6xl mx-auto mb-12 md:mb-36 text-center">
+          <div className="content-wrapper mb-12 md:mb-36 text-center">
             <SectionTitle seoSubtitle="Tecnologia di Siti Web Alessandria" title="Tecnologia dei siti web" subtitle="Come realizzo i siti web" />
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mx-4 sm:mx-0">
@@ -156,7 +156,7 @@ export default function Home({services, latestPortfolio, portfolio, personalData
 
         
         <section className="section-bg-element-bar reverse">
-          <div className="max-w-6xl mx-auto mt-32 mb-8 text-center">
+          <div className="content-wrapper mt-32 mb-8 text-center">
             <div className="md:flex">
               <div className="w-11/12 mx-auto mb-6 md:w-4/12 md:mx-0 md:mb-0 text-left">
                 <h3 className="seo-subtitle">Siti Web Alessandria</h3>
@@ -200,7 +200,7 @@ export async function getStaticProps(){
   const features = await getAllMarkdownFiles('data/collections/features')
   const posts = await getSingleJSON('https://www.a2area.it/wp-json/wp/v2/posts/?per_page=3')
 
-  console.log(latestPortfolio)
+  // console.log(latestPortfolio)
 
   // Return the pages static props
   return {
