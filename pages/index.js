@@ -200,8 +200,6 @@ export async function getStaticProps(){
   const features = await getAllMarkdownFiles('data/collections/features')
   const posts = await getSingleJSON('https://www.a2area.it/wp-json/wp/v2/posts/?per_page=3')
 
-  // console.log(latestPortfolio)
-
   // Return the pages static props
   return {
       props: {
