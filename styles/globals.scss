@@ -42,6 +42,16 @@ strong{
     @apply duration-500 ease-in-out opacity-75 hover:opacity-100;
 }
 
+label{
+    @apply text-xs mb-1 uppercase text-left;
+}
+input{
+    @apply bg-white/25 p-3 text-white rounded-md w-full;
+}
+textarea{
+    @apply bg-white/25 p-3 text-white rounded-md w-full;
+}
+
 .translate-x-neg-half{ transform: translateX(-50%); }
 .translate-y-neg-half{ transform: translateY(-50%); }
 .translate-xy-neg-half{ transform: translate(-50%, -50%); }
