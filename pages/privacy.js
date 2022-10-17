@@ -3,12 +3,13 @@ import Link from 'next/link'
 import Navbar from '../components/Navbar/Navbar'
 import Footer from '../components/Footer/Footer'
 import {getSingleMarkdownFiles} from '../lib/markdownReader'
+import markdownToHtml from '../lib/markdownToHtmls'
 import getSingleJSON from '../lib/JSONReader'
 
 import Logo from '../public/logo.png'
 const commonData = require('../data/common.json')
 
-export default function Privacy({page, personalData}) {
+export default function Privacy({personalData, page, content}) {
   return (
     <div>
       <Head>
@@ -27,7 +28,7 @@ export default function Privacy({page, personalData}) {
             
             <div>
                 <h2 className="title">{page.frontmatter.title}</h2>
-                <div dangerouslySetInnerHTML={{ __html: page.content }} />
+                <div className="page-content-wrapper" dangerouslySetInnerHTML={{ __html: content }} />
             </div>
 
           </div>
@@ -48,14 +49,16 @@ export default function Privacy({page, personalData}) {
 //Generating the Static Props for the Blog Page
 export async function getStaticProps(){
 
-    const personalData = await getSingleJSON('https://www.alessandroalessio.eu/data/contacts.json')
-    const page = await getSingleMarkdownFiles('data/pages/privacy.md')
+  const personalData = await getSingleJSON('https://www.alessandroalessio.eu/data/contacts.json')
+  const page = await getSingleMarkdownFiles('data/pages/privacy.md')
+  const content = await markdownToHtml(page.content)
 
   // Return the pages static props
   return {
       props: {
         personalData,
-        page
+        page,
+        content
       },
   };
 }
