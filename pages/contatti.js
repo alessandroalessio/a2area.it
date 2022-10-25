@@ -33,9 +33,9 @@ export default function Cookie({page, personalData}) {
 
                     <div className="border mb-8">
                       <form action="/api/generic-contacts" method="post">
-                        <label for="name">Name:</label>
+                        <label htmlFor="name">Name:</label>
                         <input type="text" id="name" name="name" required />
-                        <button type="submit" class="btn">Submit</button>
+                        <button type="submit" className="btn">Submit</button>
                       </form>
                     </div>
 
@@ -44,15 +44,15 @@ export default function Cookie({page, personalData}) {
                         
                         <div className="flex gap-4 mb-4">
                             <div className="w-1/3">
-                                <label htmlFor="name" class="block">Nome e Cognome</label>
+                                <label htmlFor="name" className="block">Nome e Cognome</label>
                                 <input name="Name" id="name" type="text" placeholder="Nome e Cognome" className="block" />
                             </div>
                             <div className="w-1/3">
-                                <label htmlFor="email" class="block">Email</label>
+                                <label htmlFor="email" className="block">Email</label>
                                 <input name="Email" id="email" type="email" placeholder="Email" className="block" />
                             </div>
                             <div className="w-1/3">
-                                <label htmlFor="email" class="block">Telefono</label>
+                                <label htmlFor="email" className="block">Telefono</label>
                                 <input name="Phone" id="phone" type="text" placeholder="Tel." className="block" />
                             </div>
                         </div>
