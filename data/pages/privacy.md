@@ -2,44 +2,39 @@
 title: Privacy Policy
 ---
 
-## Subtitle
-
-Alessandro Alessio con sede in Via U. De Foro 1, Alessandria (AL), in qualità di Titolare del trattamento dei dati personali ai sensi del GDPR UE 679/2016 Regolamento Generale sulla Protezione dei Dati riconosce l’importanza della protezione dei dati personali e considera la sua tutela uno degli obiettivi principali della propria attività.
+Alessandro Alessio con sede in Via U. De Foro 1, Alessandria (AL), in qualità di Titolare del trattamento dei dati personali ai sensi del **GDPR UE 679/2016 Regolamento Generale sulla Protezione dei Dati** riconosce l’importanza della protezione dei dati personali e considera la sua tutela uno degli obiettivi principali della propria attività.
 
 Prima di comunicare qualsiasi dato personale, Alessandro Alessio Vi invita a leggere con attenzione la presente privacy policy, poiché contiene informazioni importanti sulla tutela dei dati personali e sulle misure di sicurezza adottate per garantirne la riservatezza nel pieno rispetto del GDPR e:
 
-\- si intende resa solo per il sito www.a2area.it(“Sito”) mentre non si applica ad altri siti web eventualmente consultati tramite link esterni;
-
-\- è da intendersi quale Informativa resa ai sensi dell’art. 13 del GDPR a coloro che interagiscono con il Sito;
-
-\- si conforma alla Raccomandazione n. 2/2001 relativa ai requisiti minimi per la raccolta di dati on-line nell’Unione Europea, adottata il 17 maggio 2001 dal Gruppo di Lavoro Articolo 29.
+-   si intende resa solo per il sito www.a2area.it (“Sito”) mentre non si applica ad altri siti web eventualmente consultati tramite link esterni;
+-   è da intendersi quale Informativa resa ai sensi dell’art. 13 del GDPR a coloro che interagiscono con il Sito;
+-   si conforma alla Raccomandazione n. 2/2001 relativa ai requisiti minimi per la raccolta di dati on-line nell’Unione Europea, adottata il 17 maggio 2001 dal Gruppo di Lavoro Articolo 29.
 
 Alessandro Alessio Vi informa che il trattamento dei Vostri dati personali sarà improntato ai principi di liceità, correttezza, trasparenza, limitazione delle finalità e della conservazione, minimizzazione dei dati, esattezza, integrità e riservatezza. I Vostri dati personali verranno pertanto trattati in accordo alle disposizioni legislative del GDPR e degli obblighi di riservatezza ivi previsti.
 
-**INDICE  
-**La presente Privacy Policy è composta dalle seguenti voci:
+## INDICE
+La presente Privacy Policy è composta dalle seguenti voci:
 
-1\. TITOLARE DEL TRATTAMENTO
+1.  TITOLARE DEL TRATTAMENTO
 
-2\. I DATI PERSONALI OGGETTO DI TRATTAMENTO
+2.  I DATI PERSONALI OGGETTO DI TRATTAMENTO
+        a   Dati di navigazione
+        b   Dati forniti volontariamente
+        c   Cookie e tecnologie affini
 
-a. Dati di navigazione
+3.  FINALITA’, BASE GIURIDICA E NATURA OBBLIGATORIA O FACOLTATIVA DEL TRATTAMENTO
 
-b. Dati forniti volontariamente
+4.  DESTINATARI
 
-c. Cookie e tecnologie affini
+5.  TRASFERIMENTI
 
-3\. FINALITA’, BASE GIURIDICA E NATURA OBBLIGATORIA O FACOLTATIVA DEL TRATTAMENTO
+6.  CONSERVAZIONE DEI DATI
 
-4\. DESTINATARI
+7.  I DIRITTI DELL’INTERESSATO
 
-5\. TRASFERIMENTI
+8.  MODIFICHE
 
-6\. CONSERVAZIONE DEI DATI
 
-7\. I DIRITTI DELL’INTERESSATO
-
-8\. MODIFICHE
 
 **1\. TITOLARE DEL TRATTAMENTO**
 
@@ -56,8 +51,9 @@ I Dati Personali raccolti dal Sito sono i seguenti:
 I sistemi informatici del Sito raccolgono alcuni Dati Personali la cui trasmissione è implicita nell’uso dei protocolli di comunicazione di Internet. Si tratta di informazioni che non sono raccolte per essere associate a te, ma che per loro stessa natura potrebbero, attraverso elaborazioni ed associazioni con dati detenuti da terzi, permettere di identificarti. Tra questi ci sono gli indirizzi IP o i nomi a dominio dei dispositivi utilizzati per connetterti al Sito, gli indirizzi in notazione URI (Uniform Resource Identifier) delle risorse richieste, l’orario della richiesta, il metodo utilizzato nel sottoporre la richiesta al server, la dimensione del file ottenuto in risposta, il codice numerico indicante lo stato della risposta data dal server (buon fine, errore, ecc.) ed altri parametri relativi al tuo sistema operativo e ambiente informatico.
 
 Questi dati vengono utilizzati al fine di ricavare informazioni statistiche anonime sull’uso del Sito e per controllarne il corretto funzionamento; per permettere  
-– vista l’architettura dei sistemi utilizzati  
-– la corretta erogazione delle varie funzionalità da te richieste.
+
+–   vista l’architettura dei sistemi utilizzati  
+–   la corretta erogazione delle varie funzionalità da te richieste.
 
 **b. Dati forniti volontariamente**
 
@@ -94,8 +90,9 @@ b. persone autorizzate da Alessandro Alessio al trattamento dei Dati Personali c
 
 c. autorità giurisdizionali nell’esercizio delle loro funzioni quando richiesto dal GDPR.
 
-**5\. TRASFERIMENTI  
-**Spazio Economico Europeo
+**5\. TRASFERIMENTI**
+
+Spazio Economico Europeo
 
 **6\. CONSERVAZIONE DEI DATI**
 

@@ -255,3 +255,39 @@ textarea{
     }
 
 }
+
+.content-section{
+    @apply mt-12 text-left text-gray-300 leading-7 tracking-wide;
+
+    h1, .title{
+        @apply text-5xl text-center;        
+    }
+
+    h2{
+        @apply text-2xl mb-4 font-bold;
+    }
+
+    h3{
+        @apply text-lg mb-4;
+    }
+
+    p{
+        @apply mb-4;
+    }
+
+    strong{
+        @apply text-gray-200;
+    }
+
+    ul{
+        @apply list-disc list-inside mb-4 ml-4;
+    }
+
+    ol{
+        @apply list-decimal list-inside mb-4 ml-4;
+        
+        li > p{
+            @apply inline;
+        }
+    }
+}

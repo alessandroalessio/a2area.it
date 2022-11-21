@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Navbar from '../components/Navbar/Navbar'
 import Footer from '../components/Footer/Footer'
 import {getSingleMarkdownFiles} from '../lib/markdownReader'
+import markdownToHtml from '../lib/markdownToHtmls'
 import getSingleJSON from '../lib/JSONReader'
 
 import Logo from '../public/logo.png'
@@ -22,10 +23,10 @@ export default function Cookie({page, personalData}) {
 
         <Navbar />
 
-        <section className="section-bg-element-bar">
+        <section>
           <div className="content-wrapper mb-36 text-center">
             
-            <div>
+            <div class="content-section">
                 <h2 className="title">{page.frontmatter.title}</h2>
                 <div dangerouslySetInnerHTML={{ __html: page.content }} />
             </div>
@@ -50,6 +51,8 @@ export async function getStaticProps(){
 
     const personalData = await getSingleJSON('https://www.alessandroalessio.eu/data/contacts.json')
     const page = await getSingleMarkdownFiles('data/pages/cookie.md')
+
+    page.content = await markdownToHtml(page.content)
 
   // Return the pages static props
   return {

@@ -31,7 +31,7 @@ export default function Cookie({page, personalData}) {
                     <h2 className="text-xl font-black">Contattami</h2>
                     <p className="text-sm mb-6">Lorem ipsum dolor sit amet</p>
 
-                    <form action="https://formspree.io/f/" method="post">
+                    <form action="#" method="post">
                         
                         <div className="flex gap-4 mb-4">
                             <div className="w-1/3">
