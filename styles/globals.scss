@@ -161,6 +161,35 @@ textarea{
     }
 }
 
+.page-content-wrapper{
+    text-align: left;
+    p{
+        @apply my-4;
+    }
+    h2, h3, h4, h5{
+        @apply block font-extrabold my-2 font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-emerald-500 to-purple-500;
+    }
+    ul{
+        @apply ml-3 block;
+        li:before{
+            content: '—';
+            @apply font-light inline-block mr-2 mb-1;
+        }
+    }
+    ol{
+        @apply ml-3 block;
+        li{
+            @apply list-decimal;
+            ul{
+                list-style: circle;
+                li{
+                    content: '';
+                }
+            }
+        }
+    }
+}
+
 .portfolio-wrapper{
     .portfolio-overlay{
         position: absolute;

@@ -3,13 +3,13 @@ import Link from 'next/link'
 import Navbar from '../components/Navbar/Navbar'
 import Footer from '../components/Footer/Footer'
 import {getSingleMarkdownFiles} from '../lib/markdownReader'
-import getSingleJSON from '../lib/JSONReader'
 import markdownToHtml from '../lib/markdownToHtmls'
+import getSingleJSON from '../lib/JSONReader'
 
 import Logo from '../public/logo.png'
 const commonData = require('../data/common.json')
 
-export default function Privacy({page, personalData}) {
+export default function Privacy({personalData, page, content}) {
   return (
     <div>
       <Head>
@@ -28,7 +28,7 @@ export default function Privacy({page, personalData}) {
             
             <div class="content-section">
                 <h2 className="title">{page.frontmatter.title}</h2>
-                <div dangerouslySetInnerHTML={{ __html: page.content }} />
+                <div className="page-content-wrapper" dangerouslySetInnerHTML={{ __html: content }} />
             </div>
 
           </div>

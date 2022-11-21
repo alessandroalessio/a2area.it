@@ -31,19 +31,32 @@ export default function Cookie({page, personalData}) {
                     <h2 className="text-xl font-black">Contattami</h2>
                     <p className="text-sm mb-6">Lorem ipsum dolor sit amet</p>
 
+<<<<<<< HEAD
                     <form action="#" method="post">
+=======
+                    <div className="border mb-8">
+                      <form action="/api/generic-contacts" method="post">
+                        <label htmlFor="name">Name:</label>
+                        <input type="text" id="name" name="name" required />
+                        <button type="submit" className="btn">Submit</button>
+                      </form>
+                    </div>
+
+
+                    <form action="https://formspree.io/f/" method="post">
+>>>>>>> 9b7a024791a6ab0366e5d5e61a01683202e6f7f6
                         
                         <div className="flex gap-4 mb-4">
                             <div className="w-1/3">
-                                <label htmlFor="name" class="block">Nome e Cognome</label>
+                                <label htmlFor="name" className="block">Nome e Cognome</label>
                                 <input name="Name" id="name" type="text" placeholder="Nome e Cognome" className="block" />
                             </div>
                             <div className="w-1/3">
-                                <label htmlFor="email" class="block">Email</label>
+                                <label htmlFor="email" className="block">Email</label>
                                 <input name="Email" id="email" type="email" placeholder="Email" className="block" />
                             </div>
                             <div className="w-1/3">
-                                <label htmlFor="email" class="block">Telefono</label>
+                                <label htmlFor="email" className="block">Telefono</label>
                                 <input name="Phone" id="phone" type="text" placeholder="Tel." className="block" />
                             </div>
                         </div>
