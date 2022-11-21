@@ -28,7 +28,7 @@ export default function Cookie({personalData, page, content}) {
             
             <div class="content-section">
                 <h2 className="title">{page.frontmatter.title}</h2>
-                <div className="page-content-wrapper"  dangerouslySetInnerHTML={{ __html: content }} />
+                <div className="page-content-wrapper"  dangerouslySetInnerHTML={{ __html: page.content }} />
             </div>
 
           </div>
@@ -51,16 +51,13 @@ export async function getStaticProps(){
 
   const personalData = await getSingleJSON('https://www.alessandroalessio.eu/data/contacts.json')
   const page = await getSingleMarkdownFiles('data/pages/cookie.md')
-  const content = await markdownToHtml(page.content)
-
-    page.content = await markdownToHtml(page.content)
+  page.content = await markdownToHtml(page.content)
 
   // Return the pages static props
   return {
       props: {
         personalData,
-        page,
-        content
+        page
       },
   };
 }

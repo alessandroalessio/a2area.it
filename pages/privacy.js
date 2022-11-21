@@ -28,7 +28,7 @@ export default function Privacy({personalData, page, content}) {
             
             <div class="content-section">
                 <h2 className="title">{page.frontmatter.title}</h2>
-                <div className="page-content-wrapper" dangerouslySetInnerHTML={{ __html: content }} />
+                <div className="page-content-wrapper" dangerouslySetInnerHTML={{ __html: page.content }} />
             </div>
 
           </div>
