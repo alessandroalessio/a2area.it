@@ -19,7 +19,7 @@ function Navbar (){
                 <ul className="hidden md:flex">
                     <li className="my-3 mx-6"><Link href="/"><a className="hover-menu">Chi sono</a></Link></li>
                     <li className="my-3 mx-6"><Link href="/"><a className="hover-menu">Servizi</a></Link></li>
-                    <li className="my-3 mx-6"><Link href="/"><a className="hover-menu">Portfolio</a></Link></li>
+                    <li className="my-3 mx-6"><Link href="/portfolio/"><a className="hover-menu">Portfolio</a></Link></li>
                     <li className="my-3 mx-6"><Link href="/"><a className="hover-menu">Blog</a></Link></li>
                     <li className="my-3 mx-6"><Link href="/contatti"><a className="hover-menu">Contatti</a></Link></li>
                 </ul>
