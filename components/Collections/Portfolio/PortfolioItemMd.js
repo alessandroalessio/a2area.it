@@ -4,7 +4,7 @@ import Img from 'next/image'
 export default function PortfolioItemMd(props){
     return(
         <>
-            <div className="w-6/12 overflow-auto rounded-xl">
+            <div className="overflow-auto rounded-xl">
                 <Link href={"/portfolio/"+props.slug}>
                     <a className="overflow-hidden relative">
                         <div className="portfolio-wrapper">

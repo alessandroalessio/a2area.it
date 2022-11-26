@@ -267,6 +267,10 @@ textarea{
             border border-purple-500
             ease-in-out duration-500
             ;
+
+        &:hover{
+            box-shadow: 0 0 20px #7e22ce;
+        }
     }
     
     .icon-wrapper svg{
