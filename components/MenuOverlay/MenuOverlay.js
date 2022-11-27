@@ -20,9 +20,9 @@ function MenuOverlay(props) {
                 <li className="text-right mb-4"><small className="text-xs uppercase cursor-pointer tracking-widest" onClick={closeFullMenu}>Chiudi</small></li>
                 <li className="my-2 py-1"><Link href="/"><a>Chi sono</a></Link></li>
                 <li className="my-2 py-1"><Link href="/"><a>Servizi</a></Link></li>
-                <li className="my-2 py-1"><Link href="/"><a>Portfolio</a></Link></li>
+                <li className="my-2 py-1"><Link href="/portfolio/"><a>Portfolio</a></Link></li>
                 <li className="my-2 py-1"><Link href="/"><a>Blog</a></Link></li>
-                <li className="my-2 py-1"><Link href="/"><a>Contatti</a></Link></li>
+                <li className="my-2 py-1"><Link href="/contatti"><a>Contatti</a></Link></li>
             </ul>
         </span>
         <div className="btn-bordered flex md:hidden items-center" onClick={openFullMenu}>

@@ -28,45 +28,48 @@ export default function Cookie({page, personalData}) {
             <div>
 
                 <div className="max-w-6xl m-auto mt-24 p-8">
-                    <h2 className="text-xl font-black">Contattami</h2>
-                    <p className="text-sm mb-6">Lorem ipsum dolor sit amet</p>
+                    <h1 className="title">Contattami</h1>
+                    <p className="subtitle mb-6">Lorem ipsum dolor sit amet</p>
 
-                    <div className="border mb-8">
+                    <div className="mb-8">
                       <form action="/api/generic-contacts" method="post">
-                        <label htmlFor="name">Name:</label>
-                        <input type="text" id="name" name="name" required />
-                        <button type="submit" className="btn">Submit</button>
+
+                        <div className="md:flex md:flex-grow md:justify-between md:space-x-4">
+                          <div className="field-name-wrap text-left mb-4">
+                            <label htmlFor="name">Nome e Cognome:</label>
+                            <input type="text" id="name" name="name" required />
+                          </div>
+                          <div className="field-email-wrap text-left mb-4">
+                            <label htmlFor="email">Email:</label>
+                            <input type="email" id="email" name="email" required />
+                          </div>
+                          <div className="field-tel-wrap text-left mb-4">
+                            <label htmlFor="tel">Telefono:</label>
+                            <input type="number" id="tel" name="tel" required />
+                          </div> 
+                        </div>
+
+                        <div className="block">
+                          <div className="field-message-wrap text-left mb-4">
+                            <label htmlFor="tel">Messaggio:</label>
+                            <textarea id="message" name="message" className="h-32 block w-full" required></textarea>
+                          </div> 
+                        </div>
+
+
+                        <div className="md:flex md:flex-grow md:justify-between items-center md:space-x-4">
+                          <div className="field-privacy-wrap text-left mb-4">
+                            <input type="checkbox" id="privacy" name="privacy" className="h-32" required />
+                            <label htmlFor="tel">Accetto la <Link href="/privacy">Privacy Policy</Link></label>
+                          </div>
+                          <div className="field-privacy-wrap text-left mb-4">
+                            <button type="submit" className="btn text-lg py-2 px-8">Invia richiesta</button>
+                          </div>
+                        </div>
+
                       </form>
                     </div>
 
-                    <form action="https://formspree.io/f/" method="post">
-                        
-                        <div className="flex gap-4 mb-4">
-                            <div className="w-1/3">
-                                <label htmlFor="name" className="block">Nome e Cognome</label>
-                                <input name="Name" id="name" type="text" placeholder="Nome e Cognome" className="block" />
-                            </div>
-                            <div className="w-1/3">
-                                <label htmlFor="email" className="block">Email</label>
-                                <input name="Email" id="email" type="email" placeholder="Email" className="block" />
-                            </div>
-                            <div className="w-1/3">
-                                <label htmlFor="email" className="block">Telefono</label>
-                                <input name="Phone" id="phone" type="text" placeholder="Tel." className="block" />
-                            </div>
-                        </div>
-                        
-                        <div className="block mb-4">
-                            <label htmlFor="message" className="block">Messaggio</label>
-                            <textarea name="Message" id="message" type="message"  placeholder="Scrivi il tuo messaggio qui..."></textarea>
-                        </div>
-
-                        <div className="flex">
-                        <div className="text-left w-1/2"></div>
-                        <div className="text-right w-1/2"><button type="submit" className="btn">Invia</button></div>
-                        </div>
-                        
-                    </form>
                 </div>
             </div>
 

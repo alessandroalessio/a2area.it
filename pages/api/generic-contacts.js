@@ -17,6 +17,12 @@ export default function handler(req, res) {
   
     // Found the name.
     // Sends a HTTP success code
-    // res.status(200).json({ data: `${body.first} ${body.last}` })
+    res.status(200).json({ 
+        name: body.name,
+        email: body.email,
+        tel: body.tel,
+        privacy: body.privacy,
+        message: body.message
+    })
 
 }
